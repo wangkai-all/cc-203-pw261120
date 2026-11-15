@@ -1,0 +1,803 @@
+{
+  "site": {
+    "id": "site-wangjing",
+    "name": "望京北充电站",
+    "timezone": "Asia/Shanghai",
+    "address": "虚构地址：望京北路 12 号（样例数据）",
+    "operator": "北望充电（虚构）",
+    "defaultAsOf": "2026-11-16T00:00:00+08:00"
+  },
+  "guns": [
+    {
+      "id": "gun-wj-b1",
+      "code": "B1",
+      "displayName": "B1",
+      "connectorType": "CCS2",
+      "powerKw": 180,
+      "position": "北区 1 号位"
+    },
+    {
+      "id": "gun-wj-b2",
+      "code": "B2",
+      "displayName": "B2",
+      "connectorType": "CCS2",
+      "powerKw": 180,
+      "position": "北区 2 号位"
+    },
+    {
+      "id": "gun-wj-b3",
+      "code": "B3",
+      "displayName": "B3",
+      "connectorType": "GB/T 直流",
+      "powerKw": 90,
+      "position": "北区 3 号位"
+    }
+  ],
+  "aliases": [],
+  "statuses": [
+    {
+      "externalId": "ST-B1-001",
+      "gunRef": "B1",
+      "state": "available",
+      "eventTime": "2026-11-12T16:00:00.000Z",
+      "receivedAt": "2026-11-12T16:00:22.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 1,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -59
+      }
+    },
+    {
+      "externalId": "ST-B2-001",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-12T16:00:00.000Z",
+      "receivedAt": "2026-11-12T16:00:22.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 1,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -59
+      }
+    },
+    {
+      "externalId": "ST-B1-002",
+      "gunRef": "B1",
+      "state": "available",
+      "eventTime": "2026-11-12T20:00:00.000Z",
+      "receivedAt": "2026-11-12T20:00:29.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 2,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -60
+      }
+    },
+    {
+      "externalId": "ST-B2-002",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-12T20:00:00.000Z",
+      "receivedAt": "2026-11-12T20:00:29.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 2,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -60
+      }
+    },
+    {
+      "externalId": "ST-B1-003",
+      "gunRef": "B1",
+      "state": "available",
+      "eventTime": "2026-11-13T00:00:00.000Z",
+      "receivedAt": "2026-11-13T00:00:36.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 3,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -61
+      }
+    },
+    {
+      "externalId": "ST-B2-003",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-13T00:00:00.000Z",
+      "receivedAt": "2026-11-13T00:00:36.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 3,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -61
+      }
+    },
+    {
+      "externalId": "ST-B2-CONFLICT1",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-13T02:00:00.000Z",
+      "receivedAt": "2026-11-13T02:00:08.000Z",
+      "source": "third-party-bridge",
+      "payload": {
+        "note": "桥接缓存滞后，同一时刻报告了不同状态"
+      }
+    },
+    {
+      "externalId": "ST-B1-004",
+      "gunRef": "B1",
+      "state": "occupied",
+      "eventTime": "2026-11-13T02:00:00.000Z",
+      "receivedAt": "2026-11-13T02:00:43.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 4,
+        "reported_state": "充电中",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -62
+      }
+    },
+    {
+      "externalId": "ST-B2-004",
+      "gunRef": "B2",
+      "state": "occupied",
+      "eventTime": "2026-11-13T02:00:00.000Z",
+      "receivedAt": "2026-11-13T02:00:43.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 4,
+        "reported_state": "充电中",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -62
+      }
+    },
+    {
+      "externalId": "ST-B2-004",
+      "gunRef": "B2",
+      "state": "occupied",
+      "eventTime": "2026-11-13T02:00:00.000Z",
+      "receivedAt": "2026-11-13T02:03:43.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 4,
+        "reported_state": "充电中",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -62,
+        "note": "MQTT QoS1 重投（同 externalId）"
+      }
+    },
+    {
+      "externalId": "ST-B2-DUP-CONTENT",
+      "gunRef": "B2",
+      "state": "occupied",
+      "eventTime": "2026-11-13T02:00:00.000Z",
+      "receivedAt": "2026-11-13T02:05:03.000Z",
+      "source": "third-party-bridge",
+      "payload": {
+        "note": "桥接复制（同内容，不同 ID）"
+      }
+    },
+    {
+      "externalId": "ST-B1-005",
+      "gunRef": "B1",
+      "state": "available",
+      "eventTime": "2026-11-13T03:05:00.000Z",
+      "receivedAt": "2026-11-13T03:05:50.000Z",
+      "source": "site-journal",
+      "payload": {
+        "seq": 5,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -63
+      }
+    },
+    {
+      "externalId": "ST-B2-005",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-13T03:25:00.000Z",
+      "receivedAt": "2026-11-13T03:25:50.000Z",
+      "source": "site-journal",
+      "payload": {
+        "seq": 5,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -63
+      }
+    },
+    {
+      "externalId": "ST-B1-006",
+      "gunRef": "B1",
+      "state": "available",
+      "eventTime": "2026-11-13T07:05:00.000Z",
+      "receivedAt": "2026-11-13T07:05:57.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 6,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -64
+      }
+    },
+    {
+      "externalId": "ST-B2-006",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-13T07:25:00.000Z",
+      "receivedAt": "2026-11-13T07:25:57.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 6,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -64
+      }
+    },
+    {
+      "externalId": "ST-B1-007",
+      "gunRef": "B1",
+      "state": "available",
+      "eventTime": "2026-11-13T11:05:00.000Z",
+      "receivedAt": "2026-11-13T11:06:04.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 7,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -65
+      }
+    },
+    {
+      "externalId": "ST-B2-007",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-13T11:25:00.000Z",
+      "receivedAt": "2026-11-13T11:26:04.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 7,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -65
+      }
+    },
+    {
+      "externalId": "ST-B1-008",
+      "gunRef": "B1",
+      "state": "available",
+      "eventTime": "2026-11-13T15:05:00.000Z",
+      "receivedAt": "2026-11-13T15:06:11.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 8,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -66
+      }
+    },
+    {
+      "externalId": "ST-B2-008",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-13T15:25:00.000Z",
+      "receivedAt": "2026-11-13T15:26:11.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 8,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -66
+      }
+    },
+    {
+      "externalId": "ST-B1-009",
+      "gunRef": "B1",
+      "state": "available",
+      "eventTime": "2026-11-13T19:05:00.000Z",
+      "receivedAt": "2026-11-13T19:05:18.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 9,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -58
+      }
+    },
+    {
+      "externalId": "ST-B2-009",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-13T19:25:00.000Z",
+      "receivedAt": "2026-11-13T19:25:18.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 9,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -58
+      }
+    },
+    {
+      "externalId": "ST-B1-010",
+      "gunRef": "B1",
+      "state": "available",
+      "eventTime": "2026-11-13T23:05:00.000Z",
+      "receivedAt": "2026-11-13T23:05:25.000Z",
+      "source": "site-journal",
+      "payload": {
+        "seq": 10,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -59
+      }
+    },
+    {
+      "externalId": "ST-B2-010",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-13T23:25:00.000Z",
+      "receivedAt": "2026-11-13T23:25:25.000Z",
+      "source": "site-journal",
+      "payload": {
+        "seq": 10,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -59
+      }
+    },
+    {
+      "externalId": "ST-UNKNOWN-X9",
+      "gunRef": "X9",
+      "state": "offline",
+      "eventTime": "2026-11-14T09:00:00+08:00",
+      "receivedAt": "2026-11-14T01:00:20.000Z",
+      "source": "third-party-bridge",
+      "payload": {
+        "note": "未登记的枪口编号"
+      }
+    },
+    {
+      "externalId": "ST-B1-011",
+      "gunRef": "B1",
+      "state": "available",
+      "eventTime": "2026-11-14T03:05:00.000Z",
+      "receivedAt": "2026-11-14T03:05:32.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 11,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -60
+      }
+    },
+    {
+      "externalId": "ST-B2-011",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-14T03:25:00.000Z",
+      "receivedAt": "2026-11-14T03:25:32.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 11,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -60
+      }
+    },
+    {
+      "externalId": "ST-B1-012",
+      "gunRef": "B1",
+      "state": "available",
+      "eventTime": "2026-11-14T07:05:00.000Z",
+      "receivedAt": "2026-11-14T07:05:39.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 12,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -61
+      }
+    },
+    {
+      "externalId": "ST-B2-012",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-14T07:25:00.000Z",
+      "receivedAt": "2026-11-14T07:25:39.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 12,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -61
+      }
+    },
+    {
+      "externalId": "ST-B1-013",
+      "gunRef": "B1",
+      "state": "occupied",
+      "eventTime": "2026-11-14T08:00:00.000Z",
+      "receivedAt": "2026-11-14T08:00:46.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 13,
+        "reported_state": "充电中",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -62
+      }
+    },
+    {
+      "externalId": "ST-B1-014",
+      "gunRef": "B1",
+      "state": "available",
+      "eventTime": "2026-11-14T09:25:00.000Z",
+      "receivedAt": "2026-11-14T09:25:53.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 14,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -63
+      }
+    },
+    {
+      "externalId": "ST-B2-013",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-14T11:25:00.000Z",
+      "receivedAt": "2026-11-14T11:25:46.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 13,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -62
+      }
+    },
+    {
+      "externalId": "ST-B1-015",
+      "gunRef": "B1",
+      "state": "available",
+      "eventTime": "2026-11-14T13:25:00.000Z",
+      "receivedAt": "2026-11-14T13:26:00.000Z",
+      "source": "site-journal",
+      "payload": {
+        "seq": 15,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -64
+      }
+    },
+    {
+      "externalId": "ST-B2-014",
+      "gunRef": "B2",
+      "state": "occupied",
+      "eventTime": "2026-11-14T14:30:00.000Z",
+      "receivedAt": "2026-11-14T14:30:53.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 14,
+        "reported_state": "充电中",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -63
+      }
+    },
+    {
+      "externalId": "ST-B1-016",
+      "gunRef": "B1",
+      "state": "available",
+      "eventTime": "2026-11-14T17:25:00.000Z",
+      "receivedAt": "2026-11-14T17:26:07.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 16,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -65
+      }
+    },
+    {
+      "externalId": "ST-B2-015",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-14T18:15:00.000Z",
+      "receivedAt": "2026-11-14T18:16:00.000Z",
+      "source": "site-journal",
+      "payload": {
+        "seq": 15,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -64
+      }
+    },
+    {
+      "externalId": "ST-B1-017",
+      "gunRef": "B1",
+      "state": "available",
+      "eventTime": "2026-11-14T21:25:00.000Z",
+      "receivedAt": "2026-11-14T21:26:14.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 17,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -66
+      }
+    },
+    {
+      "externalId": "ST-B2-016",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-14T22:15:00.000Z",
+      "receivedAt": "2026-11-14T22:16:07.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 16,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -65
+      }
+    },
+    {
+      "externalId": "ST-B3-001",
+      "gunRef": "B3",
+      "state": "available",
+      "eventTime": "2026-11-15T00:00:00.000Z",
+      "receivedAt": "2026-11-15T00:00:22.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 1,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -59
+      }
+    },
+    {
+      "externalId": "ST-B1-018",
+      "gunRef": "B1",
+      "state": "available",
+      "eventTime": "2026-11-15T01:25:00.000Z",
+      "receivedAt": "2026-11-15T01:25:21.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 18,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -58
+      }
+    },
+    {
+      "externalId": "ST-B2-017",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-15T02:15:00.000Z",
+      "receivedAt": "2026-11-15T02:16:14.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 17,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -66
+      }
+    },
+    {
+      "externalId": "ST-B3-LATE1",
+      "gunRef": "B3",
+      "state": "fault",
+      "eventTime": "2026-11-15T11:20:00+08:00",
+      "receivedAt": "2026-11-16T02:00:12.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 6,
+        "reported_state": "故障",
+        "note": "补传：绝缘检测异常"
+      }
+    },
+    {
+      "externalId": "ST-B2-018",
+      "gunRef": "B2",
+      "state": "occupied",
+      "eventTime": "2026-11-15T04:00:00.000Z",
+      "receivedAt": "2026-11-15T04:00:21.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 18,
+        "reported_state": "充电中",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -58
+      }
+    },
+    {
+      "externalId": "ST-B3-002",
+      "gunRef": "B3",
+      "state": "occupied",
+      "eventTime": "2026-11-15T04:00:00.000Z",
+      "receivedAt": "2026-11-15T04:00:29.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 2,
+        "reported_state": "充电中",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -60
+      }
+    },
+    {
+      "externalId": "ST-B2-019",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-15T05:05:00.000Z",
+      "receivedAt": "2026-11-15T05:05:28.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 19,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -59
+      }
+    },
+    {
+      "externalId": "ST-B3-003",
+      "gunRef": "B3",
+      "state": "available",
+      "eventTime": "2026-11-15T05:30:00.000Z",
+      "receivedAt": "2026-11-15T05:30:36.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 3,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -61
+      }
+    },
+    {
+      "externalId": "ST-B2-020",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-15T09:05:00.000Z",
+      "receivedAt": "2026-11-15T09:05:35.000Z",
+      "source": "site-journal",
+      "payload": {
+        "seq": 20,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -60
+      }
+    },
+    {
+      "externalId": "ST-B3-004",
+      "gunRef": "B3",
+      "state": "available",
+      "eventTime": "2026-11-15T09:30:00.000Z",
+      "receivedAt": "2026-11-15T09:30:43.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 4,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -62
+      }
+    },
+    {
+      "externalId": "ST-B2-021",
+      "gunRef": "B2",
+      "state": "available",
+      "eventTime": "2026-11-15T13:05:00.000Z",
+      "receivedAt": "2026-11-15T13:05:42.000Z",
+      "source": "charger-firmware",
+      "payload": {
+        "seq": 21,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -61
+      }
+    },
+    {
+      "externalId": "ST-B3-005",
+      "gunRef": "B3",
+      "state": "available",
+      "eventTime": "2026-11-15T13:30:00.000Z",
+      "receivedAt": "2026-11-15T13:30:50.000Z",
+      "source": "site-journal",
+      "payload": {
+        "seq": 5,
+        "reported_state": "可服务",
+        "firmware": "AC-DC 3.8.2",
+        "rssi": -63
+      }
+    }
+  ],
+  "orders": [
+    {
+      "externalId": "ORD-WJ-B1-01",
+      "gunRef": "B1",
+      "startTime": "2026-11-13T10:00:00+08:00",
+      "endTime": "2026-11-13T11:00:00+08:00",
+      "energyKwh": 52.3,
+      "status": "finished",
+      "source": "ocpp-csms"
+    },
+    {
+      "externalId": "ORD-WJ-B1-02",
+      "gunRef": "B1",
+      "startTime": "2026-11-14T16:00:00+08:00",
+      "endTime": "2026-11-14T17:20:00+08:00",
+      "energyKwh": 48.7,
+      "status": "finished",
+      "source": "ocpp-csms"
+    },
+    {
+      "externalId": "ORD-WJ-B1-OPEN",
+      "gunRef": "B1",
+      "startTime": "2026-11-15T19:00:00+08:00",
+      "endTime": null,
+      "energyKwh": null,
+      "status": "started",
+      "source": "ocpp-csms"
+    },
+    {
+      "externalId": "ORD-WJ-B2-01",
+      "gunRef": "B2",
+      "startTime": "2026-11-13T10:00:00+08:00",
+      "endTime": "2026-11-13T11:20:00+08:00",
+      "energyKwh": 61.4,
+      "status": "finished",
+      "source": "ocpp-csms"
+    },
+    {
+      "externalId": "ORD-WJ-B2-02",
+      "gunRef": "B2",
+      "startTime": "2026-11-14T22:30:00+08:00",
+      "endTime": "2026-11-15T02:10:00+08:00",
+      "energyKwh": 88,
+      "status": "finished",
+      "source": "ocpp-csms"
+    },
+    {
+      "externalId": "ORD-WJ-B2-03",
+      "gunRef": "B2",
+      "startTime": "2026-11-15T12:00:00+08:00",
+      "endTime": "2026-11-15T13:00:00+08:00",
+      "energyKwh": 31.5,
+      "status": "finished",
+      "source": "ocpp-csms"
+    },
+    {
+      "externalId": "ORD-WJ-B2-BAD",
+      "gunRef": "B2",
+      "startTime": "2026-11-15T15:00:00+08:00",
+      "endTime": "2026-11-15T14:30:00+08:00",
+      "energyKwh": 0,
+      "status": "finished",
+      "source": "ocpp-csms"
+    },
+    {
+      "externalId": "ORD-WJ-B3-01",
+      "gunRef": "B3",
+      "startTime": "2026-11-15T12:00:00+08:00",
+      "endTime": "2026-11-15T13:25:00+08:00",
+      "energyKwh": 24.9,
+      "status": "finished",
+      "source": "ocpp-csms"
+    }
+  ],
+  "repairs": [
+    {
+      "externalId": "REP-WJ-B2-01",
+      "gunRef": "B2",
+      "startTime": "2026-11-13T10:30:00+08:00",
+      "endTime": "2026-11-13T10:50:00+08:00",
+      "kind": "紧固直流端子",
+      "workOrder": "WO-2026-1113-02",
+      "status": "closed",
+      "note": "例行巡检发现端子松动，快速处理",
+      "source": "maintenance-system"
+    }
+  ]
+}

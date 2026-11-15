@@ -1,0 +1,47 @@
+[
+  {
+    "id": "late-xq-a2-offline",
+    "gunRef": "A2·东侧",
+    "state": "offline",
+    "eventTime": "2026-11-14T19:20:00+08:00",
+    "receivedAt": "2026-11-16T08:05:00+08:00",
+    "source": "third-party-bridge",
+    "note": "网关补传：A2 在 11-14 19:20 曾短时离线，原分析中该段被判定为可服务",
+    "scenario": "late_status_changes_availability",
+    "payload": {
+      "gateway": "gw-3",
+      "retransmit": true,
+      "original_report": "离线"
+    }
+  },
+  {
+    "id": "late-xq-a4-fault",
+    "gunRef": "A4",
+    "state": "fault",
+    "eventTime": "2026-11-15T12:50:00+08:00",
+    "receivedAt": "2026-11-16T08:10:00+08:00",
+    "source": "charger-firmware",
+    "note": "补传：A4 交流模块在 11-15 12:50 已上报故障，早于维修工单登记时间",
+    "scenario": "late_status_extends_fault",
+    "payload": {
+      "gateway": "gw-1",
+      "retransmit": true,
+      "original_report": "故障"
+    }
+  },
+  {
+    "id": "late-xq-a1-ghost",
+    "gunRef": "A1",
+    "state": "occupied",
+    "eventTime": "2026-11-15T15:30:00+08:00",
+    "receivedAt": "2026-11-16T08:15:00+08:00",
+    "source": "third-party-bridge",
+    "note": "可疑补传：A1 当时没有订单，状态为占用的补传消息会新增占用时长",
+    "scenario": "late_status_creates_occupancy",
+    "payload": {
+      "gateway": "gw-2",
+      "retransmit": true,
+      "original_report": "充电中"
+    }
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "late-wj-b1-offline",
+    "gunRef": "B1",
+    "state": "offline",
+    "eventTime": "2026-11-15T12:30:00+08:00",
+    "receivedAt": "2026-11-16T09:20:00+08:00",
+    "source": "site-journal",
+    "note": "补传：B1 在 11-15 12:30 已离线，之前的状态推算把它当成了可服务",
+    "scenario": "late_status_fixes_coverage",
+    "payload": {
+      "journal": "j-2026-1115",
+      "retransmit": true
+    }
+  },
+  {
+    "id": "late-wj-b2-stale",
+    "gunRef": "B2",
+    "state": "available",
+    "eventTime": "2026-11-15T12:20:00+08:00",
+    "receivedAt": "2026-11-16T09:30:00+08:00",
+    "source": "third-party-bridge",
+    "note": "竞态补传：B2 在 11-15 12:20 实际仍可服务，迟到消息会把占用结束时间提前",
+    "scenario": "late_status_reduces_occupancy",
+    "payload": {
+      "gateway": "gw-7",
+      "retransmit": true
+    }
+  }
+]

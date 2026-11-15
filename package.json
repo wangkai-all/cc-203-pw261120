@@ -1,0 +1,18 @@
+{
+  "name": "gun-port-availability",
+  "version": "1.0.0",
+  "private": true,
+  "description": "充电站枪口可用时段与利用率分析：多源记录还原、口径对照、冲突提示、迟到消息对比、重算版本与明细导出",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node scripts/seed.js",
+    "seed:reset": "node scripts/seed.js --reset",
+    "samples": "node scripts/generate-samples.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  }
+}
